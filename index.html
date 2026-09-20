@@ -1,0 +1,692 @@
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liven | Sr Acabamentos e Materiais Para Construção</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            gold: '#D4AF37',
+                            amber: '#f59e0b',
+                            dark: '#0B0F17',
+                            card: '#131B2E',
+                            border: '#1E293B'
+                        }
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4' },
+                            '50%': { opacity: '0.8' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Glassmorphism Effects */
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 23, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 50%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-gold {
+            background: linear-gradient(135deg, #FEF08A 0%, #D4AF37 50%, #B45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.15) 0%, rgba(11, 15, 23, 0) 70%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Name -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-blue-700 flex items-center justify-center shadow-lg shadow-brand-500/30 text-white font-black text-xl font-display">
+                        L
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black font-display tracking-tight text-white block">LIVEN</span>
+                        <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold block -mt-1">Sr Acabamentos</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#inicio" class="hover:text-brand-400 transition-colors">Início</a>
+                    <a href="#servicos" class="hover:text-brand-400 transition-colors">Serviços</a>
+                    <a href="#empresa" class="hover:text-brand-400 transition-colors">Dados Cadastrais</a>
+                    <a href="#localizacao" class="hover:text-brand-400 transition-colors">Localização</a>
+                    <a href="#contato" class="hover:text-brand-400 transition-colors">Contato</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://www.liven.com.br" target="_blank" rel="noopener noreferrer" 
+                       class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl group bg-gradient-to-br from-brand-500 via-blue-600 to-indigo-600 group-hover:from-brand-500 group-hover:to-indigo-600 text-white shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all duration-300 transform hover:-translate-y-0.5">
+                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-slate-900 rounded-[10px] group-hover:bg-opacity-0 flex items-center gap-2">
+                            <span>Ir para o Site Oficial</span>
+                            <i class="fa-solid font-bold fa-arrow-up-right-from-square text-xs text-brand-400 group-hover:text-white"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-400">Início</a>
+            <a href="#servicos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-400">Serviços</a>
+            <a href="#empresa" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-400">Dados Cadastrais</a>
+            <a href="#localizacao" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-400">Localização</a>
+            <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-brand-400">Contato</a>
+            <div class="pt-2">
+                <a href="https://www.liven.com.br" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-500 text-white font-semibold text-center hover:bg-brand-600 transition-all">
+                    <span>Ir para o Site Oficial</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- HERO SECTION -->
+        <section id="inicio" class="relative pt-16 pb-20 md:pt-28 md:pb-32 overflow-hidden hero-glow">
+            <!-- Background Elements -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-brand-500/30 mb-8 shadow-inner">
+                        <span class="flex h-2.5 w-2.5 relative">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                        </span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Situação Cadastral: <strong class="text-emerald-400">Ativa</strong></span>
+                        <span class="text-slate-600">|</span>
+                        <span class="text-xs font-medium text-brand-400">25+ Anos de Tradição</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold font-display tracking-tight text-white mb-6 leading-tight">
+                        Excelência e Tradição em <br>
+                        <span class="gradient-text">Materiais & Acabamentos</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-normal leading-relaxed">
+                        Soluções de alto padrão para construção, arquitetura e decoração. Qualidade garantida com mais de 25 anos de solidez no mercado brasileiro.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="https://www.liven.com.br" target="_blank" rel="noopener noreferrer" 
+                           class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-blue-600 hover:from-brand-600 hover:to-blue-700 text-white font-bold text-base shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3 group">
+                            <span>Acessar Loja Oficial</span>
+                            <i class="fa-solid fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="#empresa" 
+                           class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-slate-800/80 text-slate-200 font-semibold text-base border border-slate-700/60 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-building text-slate-400"></i>
+                            <span>Informações Institucionais</span>
+                        </a>
+                    </div>
+
+                    <!-- Corporate Quick Info -->
+                    <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-3xl mx-auto">
+                        <div class="px-3">
+                            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Razão Social</p>
+                            <p class="text-sm font-semibold text-slate-200 truncate" title="Sr Acabamentos e Materiais Para Construcao LTDA">Sr Acabamentos LTDA</p>
+                        </div>
+                        <div class="px-3">
+                            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">CNPJ Filial</p>
+                            <p class="text-sm font-semibold text-slate-200">26.443.804/0003-10</p>
+                        </div>
+                        <div class="px-3">
+                            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Capital Social</p>
+                            <p class="text-sm font-semibold text-emerald-400">R$ 15.165.160,00</p>
+                        </div>
+                        <div class="px-3">
+                            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Fundação</p>
+                            <p class="text-sm font-semibold text-slate-200">06/10/2000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN SERVICES SECTION -->
+        <section id="servicos" class="py-20 relative bg-slate-950/60 border-y border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-400 mb-3">Soluções Completas</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold font-display text-white">Principais Áreas de Atuação</p>
+                    <p class="text-slate-400 mt-4 text-base">Atendendo desde projetos residenciais sofisticados até grandes obras corporativas com o padrão de qualidade Liven.</p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Service 1 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Acabamentos Premium</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Seleção exclusiva de itens de acabamento para elevar o padrão estético e funcional de qualquer ambiente.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-sink"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Louças e Metais Sanitários</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Torneiras, misturadores, cubas e bacias de alta tecnologia e design assinado pelas melhores marcas do segmento.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-border-all"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Revestimentos e Pisos</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Porcelanatos de grandes formatos, cerâmicas nobres, pastilhas e revestimentos vinílicos/laminados de alta durabilidade.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Atendimento para Arquitetura</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Suporte técnico especializado para arquitetos, engenheiros e designers de interiores na especificação de projetos.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Logística & Entrega Expressa</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Infraestrutura logística eficiente para garantir entregas pontuais e seguras direto na sua obra.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-brand-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Materiais Básicos e Estruturais</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Amplo portfólio de insumos de construção com alto rigor de qualidade do alicerce ao acabamento final.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CORPORATE DATA / TRANSPARENCY SECTION -->
+        <section id="empresa" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col lg:flex-row items-start gap-12">
+                    
+                    <!-- Left Title Block -->
+                    <div class="lg:w-1/3">
+                        <div class="sticky top-28">
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-400 mb-3 block">Transparência Empresarial</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mb-6">Informações e Dados do Registro</h2>
+                            <p class="text-slate-400 text-base leading-relaxed mb-8">
+                                A Liven atua sob a razão social **Sr Acabamentos e Materiais Para Construcao LTDA**, mantendo compromisso com a conformidade fiscal e integridade corporativa.
+                            </p>
+
+                            <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+                                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Situação Cadastral</p>
+                                        <p class="text-sm font-bold text-emerald-400">ATIVA (Desde 03/11/2005)</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-400">
+                                        <i class="fa-solid fa-award text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-400">Tempo de Atividade</p>
+                                        <p class="text-sm font-bold text-white">Mais de 25 anos no Mercado</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Data Grid Cards -->
+                    <div class="lg:w-2/3 w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            
+                            <!-- Card: CNPJ -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">CNPJ</span>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-bold text-white font-mono">26.443.804/0003-10</span>
+                                    <button onclick="copyToClipboard('26.443.804/0003-10', this)" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded transition-colors" title="Copiar CNPJ">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                                <p class="text-[11px] text-slate-500 mt-1">Numeração limpa: 26443804000310</p>
+                            </div>
+
+                            <!-- Card: Tipo & Porte -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">Tipo & Porte</span>
+                                <p class="text-lg font-bold text-white">Filial</p>
+                                <p class="text-xs text-slate-400 mt-1">Porte: <span class="text-slate-200 font-medium">Sem Enquadramento</span></p>
+                            </div>
+
+                            <!-- Card: Inscrições Estaduais -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800 sm:col-span-2">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Inscrições Estaduais</span>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+                                        <span class="text-xs text-slate-400 block">I.E. Paraná (PR)</span>
+                                        <span class="text-sm font-bold text-brand-400 font-mono">09911949-75</span>
+                                    </div>
+                                    <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800">
+                                        <span class="text-xs text-slate-400 block">I.E. São Paulo (SP)</span>
+                                        <span class="text-sm font-bold text-brand-400 font-mono">807.010.922.113</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card: Razão Social -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800 sm:col-span-2">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">Razão Social Oficial</span>
+                                <p class="text-base font-bold text-white">Sr Acabamentos e Materiais Para Construcao LTDA</p>
+                                <p class="text-xs text-slate-400 mt-0.5">Nome Fantasia: <strong class="text-brand-400">Liven</strong></p>
+                            </div>
+
+                            <!-- Card: Capital Social -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">Capital Social</span>
+                                <p class="text-xl font-extrabold text-emerald-400 font-display">R$ 15.165.160,00</p>
+                                <p class="text-[11px] text-slate-500 mt-1">Quinze milhões, cento e sessenta e cinco mil reais</p>
+                            </div>
+
+                            <!-- Card: Data de Abertura -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">Data de Abertura</span>
+                                <p class="text-lg font-bold text-white">06/10/2000</p>
+                                <p class="text-xs text-slate-400 mt-1">Solidez de mais de 25 anos</p>
+                            </div>
+
+                            <!-- Card: Natureza Jurídica -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">Natureza Jurídica</span>
+                                <p class="text-sm font-bold text-white">Sociedade Empresária Limitada</p>
+                            </div>
+
+                            <!-- Card: Regimes Especiais -->
+                            <div class="glass-panel p-5 rounded-xl border border-slate-800">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">Enquadramento Tributário</span>
+                                <div class="flex items-center gap-4 text-xs mt-2">
+                                    <span class="inline-flex items-center gap-1 text-slate-300">
+                                        <i class="fa-solid fa-circle-xmark text-slate-500"></i> Simples: <strong>Não</strong>
+                                    </span>
+                                    <span class="inline-flex items-center gap-1 text-slate-300">
+                                        <i class="fa-solid fa-circle-xmark text-slate-500"></i> MEI: <strong>Não</strong>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LOCATION & CORRESPONDENCE SECTION -->
+        <section id="localizacao" class="py-20 relative bg-slate-950/60 border-y border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Left: Address Details -->
+                    <div class="space-y-6">
+                        <div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-brand-400 mb-2 block">Sede e Operação</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white">Localização Estratégica</h2>
+                            <p class="text-slate-400 mt-3 text-base">Unidade instalada no Distrito Federal com estrutura para expedição e distribuição.</p>
+                        </div>
+
+                        <!-- Address Details Card -->
+                        <div class="glass-panel p-6 rounded-2xl space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Endereço do Estabelecimento</h3>
+                                    <p class="text-lg font-bold text-white mt-1">Setor SMAS Área Especial G, S/N</p>
+                                    <p class="text-slate-300 font-medium">Complemento: Conj B Lote 8 e 9</p>
+                                    <p class="text-slate-400 text-sm mt-1">Bairro: Zona Industrial (Guará)</p>
+                                    <p class="text-slate-400 text-sm">Brasília - DF | CEP: <strong>71215-300</strong></p>
+                                </div>
+                            </div>
+
+                            <hr class="border-slate-800">
+
+                            <!-- Correspondence Block -->
+                            <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-envelope-open-text text-brand-400 text-sm"></i>
+                                    <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Endereço para Correspondência</span>
+                                </div>
+                                <p class="text-xs font-mono text-slate-300 leading-relaxed">
+                                    Liven Sr Acabamentos e Materiais Para Construcao LTDA<br>
+                                    Setor SMAS Area Especial G S/N Conj B Lote 8 e 9<br>
+                                    Zona Industrial (Guara) - Brasília DF<br>
+                                    CEP: 71215-300
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Action Link to Maps -->
+                        <div>
+                            <a href="https://maps.google.com/?q=Setor+SMAS+Area+Especial+G+Conj+B+Lote+8+9+Brasilia+DF+71215-300" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 text-sm font-semibold text-brand-400 hover:text-brand-300 transition-colors">
+                                <span>Abrir no Google Maps</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Simulated Interactive Map / Visual -->
+                    <div class="relative">
+                        <div class="glass-panel p-3 rounded-2xl border border-slate-800 shadow-2xl overflow-hidden relative group">
+                            <!-- Visual Graphic Representing Location -->
+                            <div class="w-full h-80 sm:h-96 rounded-xl bg-slate-900 relative flex items-center justify-center overflow-hidden">
+                                <!-- Grid Lines Background -->
+                                <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                                
+                                <!-- Central Pin Graphic -->
+                                <div class="relative z-10 text-center p-6">
+                                    <div class="w-20 h-20 rounded-full bg-brand-500/20 border-2 border-brand-500 flex items-center justify-center mx-auto mb-4 animate-bounce">
+                                        <i class="fa-solid fa-building-flag text-3xl text-brand-400"></i>
+                                    </div>
+                                    <span class="text-white font-bold text-lg block">Distrito Federal - Brasília</span>
+                                    <span class="text-slate-400 text-xs block mt-1">Setor SMAS Área Especial G</span>
+                                    <span class="inline-block mt-3 px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 text-xs font-semibold border border-brand-500/30">
+                                        CEP: 71215-300
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contato" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <!-- Ambient Glow -->
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="max-w-3xl mx-auto text-center mb-12 relative z-10">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-400 mb-2 block">Atendimento & Suporte</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">Canais de Contato</h2>
+                        <p class="text-slate-400 mt-4 text-base">Entre em contato direto com a nossa equipe especializada para orçamentos e dúvidas corporativas.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                        
+                        <!-- Contact Card 1: E-mail -->
+                        <a href="mailto:soreparos@soreparos.com.br" 
+                           class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition-all text-center group">
+                            <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold block mb-1">E-mail Oficial</span>
+                            <span class="text-sm font-bold text-white group-hover:text-brand-400 transition-colors block break-all">soreparos@soreparos.com.br</span>
+                            <span class="text-xs text-brand-400 font-medium inline-flex items-center gap-1 mt-3">
+                                Enviar mensagem <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Contact Card 2: Telefone 1 -->
+                        <a href="tel:6132224161" 
+                           class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition-all text-center group">
+                            <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold block mb-1">Telefone Principal</span>
+                            <span class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors block font-mono">(61) 3222-4161</span>
+                            <span class="text-xs text-emerald-400 font-medium inline-flex items-center gap-1 mt-3">
+                                Ligar Agora <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Contact Card 3: Telefone 2 -->
+                        <a href="tel:6134037000" 
+                           class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition-all text-center group">
+                            <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider font-semibold block mb-1">Central de Atendimento</span>
+                            <span class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors block font-mono">(61) 3403-7000</span>
+                            <span class="text-xs text-emerald-400 font-medium inline-flex items-center gap-1 mt-3">
+                                Ligar Agora <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <!-- CTA Banner Inside Contact -->
+                    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-brand-900/60 to-slate-900 border border-brand-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left relative z-10">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Deseja conhecer nosso catálogo digital de produtos?</h3>
+                            <p class="text-slate-400 text-sm">Acesse o portal oficial da Liven para conferir itens em estoque e novidades.</p>
+                        </div>
+                        <a href="https://www.liven.com.br" target="_blank" rel="noopener noreferrer" 
+                           class="shrink-0 px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm shadow-md transition-all flex items-center gap-2">
+                            <span>Acessar Liven.com.br</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/60">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-black font-display text-lg">
+                        L
+                    </div>
+                    <span class="text-xl font-bold font-display text-white">LIVEN</span>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-xs text-slate-400">Sr Acabamentos e Materiais Para Construcao LTDA</p>
+                    <p class="text-xs text-slate-500">CNPJ: 26.443.804/0003-10 | Brasília - DF</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Liven. Todos os direitos reservados.</p>
+                <p class="flex items-center gap-1">
+                    <span>Tradição e Qualidade desde 2000</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Copy -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-4 py-3 rounded-xl border border-brand-500/40 shadow-2xl flex items-center gap-3 translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium">CNPJ copiado com sucesso!</span>
+    </div>
+
+    <!-- JS LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy to Clipboard Utility
+        function copyToClipboard(text, btnElement) {
+            // Using execCommand fallback for iframe security compliance
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast("CNPJ copiado para a área de transferência!");
+            } catch (err) {
+                console.error('Falha ao copiar:', err);
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+
+        // Toast Handler
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
